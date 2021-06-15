@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Container, Grow, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { getPosts } from '../actions/posts';
 
