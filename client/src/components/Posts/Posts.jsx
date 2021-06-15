@@ -8,8 +8,6 @@ const Posts = () => {
     const posts = useSelector((state) => state.posts);
     const classes = useStyles();
 
-    console.log(posts);
-
     return (
         <div className={classes.card}>
             {!posts.length ? (
@@ -19,10 +17,10 @@ const Posts = () => {
                     className={classes.container}
                     container
                     alignItems="stretch"
-                    spacing={3}
+                    spacing={10}
                 >
                     {posts.map((post) => (
-                        <Grid key={post._id} item xs={12} sm={6}>
+                        <Grid key={post._id} item xs={12} sm={4}>
                             <Card post={post} />
                         </Grid>
                     ))}

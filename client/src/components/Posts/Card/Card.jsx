@@ -39,10 +39,10 @@ const Cards = (post) => {
                     <Card.Text>
                         {moment(post.post.createdAt).fromNow()}
                     </Card.Text>
+                    <Card.Text>{post.post.message}</Card.Text>
                     <Typography variant="body2" color="textSecondary">
                         {post.post.tags.map((tag) => `#${tag}`)}
                     </Typography>
-                    <Card.Text>{post.post.message}</Card.Text>
                 </Card.Body>
                 <CardActions>
                     <Button size="small" color="primary" onClick={() => {}}>
@@ -60,44 +60,3 @@ const Cards = (post) => {
 };
 
 export default Cards;
-
-// <Card style={{ width: '15rem' }}>
-//     <Card.Title className={classes.title}>
-//         {post.post.country}
-//     </Card.Title>
-//     <div className={classes.contianer}>
-//         <Button
-//             className={classes.btn}
-//             style={{ color: 'purple' }}
-//             size="small"
-//             onClick={() => {}}
-//         >
-//             <MoreHorizIcon fontSize="default" />
-//         </Button>
-//         <Card.Img
-//             className={classes.image}
-//             variant="top"
-//             src={post.post.file}
-//         />
-//     </div>
-//     <Card.Subtitle className={classes.subtitle}>
-//         {post.post.city}
-//     </Card.Subtitle>
-//     <Card.Body>
-//         <Card.Text>{moment(post.post.createdAt).fromNow()}</Card.Text>
-//         <Typography variant="body2" color="textSecondary">
-//             {post.post.tags.map((tag) => `#${tag}`)}
-//         </Typography>
-//         <Card.Text>{post.post.message}</Card.Text>
-//     </Card.Body>
-//     <CardActions>
-//         <Button size="small" color="primary" onClick={() => {}}>
-//             <ThumbUpAltIcon fontSize="small" />
-//             Like {post.post.likeCount}
-//         </Button>
-//         <Button size="small" color="primary" onClick={() => {}}>
-//             <DeleteIcon fontSize="small" />
-//             Delete
-//         </Button>
-//     </CardActions>
-// </Card>

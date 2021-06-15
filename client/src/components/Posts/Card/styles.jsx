@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     image: {
         padding: '1.5%',
         display: 'block',
+        height: '150px',
+        width: '100%',
+        alignItems: 'center',
     },
     btn: {
         position: 'absolute',
