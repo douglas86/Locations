@@ -24,18 +24,10 @@ const Submit = () => {
         }));
     };
 
-    const handleFile = (base64) => {
-        destinations.setForm((i) => ({
-            ...i,
-            file: base64,
-        }));
-    };
-
     return {
         handleSubmit,
         handleClear,
         handleInputChange,
-        handleFile,
     };
 };
 

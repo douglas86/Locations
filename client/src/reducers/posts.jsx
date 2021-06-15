@@ -1,11 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
-export default (state = [], action) => {
+export default (posts = [], action) => {
     switch (action.type) {
         case 'FETCH_ALL':
-            return state;
+            return action.payload;
         case 'CREATE':
-            return [...state, action.payload];
+            return [...posts, action.payload];
         default:
-            return state;
+            return posts;
     }
 };

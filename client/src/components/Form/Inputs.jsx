@@ -5,7 +5,7 @@ import useStyles from './styles.jsx';
 import FileBase from 'react-file-base64';
 
 const Inputs = () => {
-    const { handleInputChange, handleFile } = Submit();
+    const { handleInputChange } = Submit();
     const classes = useStyles();
     const naming = ['country', 'city', 'message', 'tags'];
     const destinations = useContext(Context);
@@ -29,7 +29,12 @@ const Inputs = () => {
                 <FileBase
                     type="file"
                     multiple={false}
-                    onDone={({ base64 }) => handleFile(base64)}
+                    onDone={({ base64 }) =>
+                        destinations.setForm({
+                            ...destinations.form,
+                            selectedFile: base64,
+                        })
+                    }
                 />
             </div>
         </div>
