@@ -1,7 +1,13 @@
+import { Container } from '@material-ui/core';
+
+import Appbar from './Appbar/Appbar';
+
 const App = () => {
     return (
         <div>
-            <h1>App</h1>
+            <Container maxWidth="lg">
+                <Appbar />
+            </Container>
         </div>
     );
 };
