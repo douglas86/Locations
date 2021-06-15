@@ -1,12 +1,15 @@
 import { useContext } from 'react';
 import { Context } from './Context.jsx';
+import { useDispatch } from 'react-redux';
+import { createPost } from '../../actions/posts';
 
 const Submit = () => {
     const destinations = useContext(Context);
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e);
+        dispatch(createPost(destinations.form));
     };
 
     const handleClear = () => {

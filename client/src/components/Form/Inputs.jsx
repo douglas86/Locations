@@ -12,30 +12,19 @@ const Inputs = () => {
 
     return (
         <div>
-            {naming.map((k, i) =>
-                destinations.form.card !== undefined ? (
-                    <div key={i}>
-                        <input
-                            type="text"
-                            className={classes.input}
-                            name={k}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                ) : (
-                    <div key={i}>
-                        <input
-                            type="text"
-                            className={classes.input}
-                            placeholder={k[0].toUpperCase() + k.slice(1)}
-                            onChange={handleInputChange}
-                            name={k}
-                            required
-                        />
-                    </div>
-                )
-            )}
+            {naming.map((k, i) => (
+                <div key={k}>
+                    <input
+                        type="text"
+                        className={classes.inputs}
+                        onChange={handleInputChange}
+                        placeholder={naming[i]}
+                        name={naming[i]}
+                        value={destinations.form.k}
+                        required
+                    />
+                </div>
+            ))}
             <div className={classes.fileInput}>
                 <FileBase
                     type="file"
